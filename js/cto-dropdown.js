@@ -23,10 +23,10 @@ $.fn.slideInMenu = function(){
 	if(this.attr('id') == 'top-bar-right'){
 		if(this.is(':visible')){
 			this.slideOut();
-			$('#menu-icon-img').attr('src',"/static/images/menu-icon-white2.png");
+			$('#menu-icon-img').attr('src',"/images/menu-icon-white2.png");
 		}else{
 			this.slideIn();
-			$('#menu-icon-img').attr('src',"/static/images/x-icon.png");
+			$('#menu-icon-img').attr('src',"/images/x-icon.png");
 		}
 	}else{
 		this.toggle();

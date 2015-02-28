@@ -7,7 +7,7 @@
 
 
 body{
-	background-image: url("/static/images/random5.jpg");
+	background-image: url("/images/random5.jpg");
 	background-clip: border-box;
 	background-repeat: no-repeat;
     background-attachment: fixed;
