@@ -14,12 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  
-  <link type="text/css" rel="stylesheet" href="/css/cto.css" >
-  <script src="/js/CTOthis.js"></script>
-  <script src="/js/background-scroll.js"></script>
-  <script src="/js/scroll-animations.js"></script>
-  <script src="/js/cto-dropdown.js"></script>
+
 
 <style>
   /** Search in alphabetical order **/
@@ -31,9 +26,10 @@
 
 
 body{
-  background-image: url("/images/random5.jpg");
+  background-image: url("http://s6.postimg.org/hhrnmf5j5/random5.jpg");
   background-clip: border-box;
   background-repeat: no-repeat;
+  background-size: cover;
     background-attachment: fixed;
     max-width:100%;
 }
@@ -408,7 +404,7 @@ $(document).ready(function(){
         var $bgobj = $(this); // assigning the object
         var xPos = $(this).css('backgroundPosition').split(' ')[0];
         $(window).scroll(function() {
-            var yPos = -($(window).scrollTop() / 10*$bgobj.data('speed'));
+            var yPos = -($(window).scrollTop() / -40*$bgobj.data('speed'));
             // Put together our final background position
             var coords = xPos + ' ' + yPos + 'px';
             // Move the background
@@ -445,10 +441,10 @@ $.fn.slideInMenu = function(){
   if(this.attr('id') == 'top-bar-right'){
     if(this.is(':visible')){
       this.slideOut();
-      $('#menu-icon-img').attr('src',"/images/menu-icon-white2.png");
+      $('#menu-icon-img').attr('src',"http://s6.postimg.org/va62i1wap/menu_icon_white2.png");
     }else{
       this.slideIn();
-      $('#menu-icon-img').attr('src',"/images/x-icon.png");
+      $('#menu-icon-img').attr('src',"http://s6.postimg.org/4rnf9bxkt/x_icon.png");
     }
   }else{
     this.toggle();
@@ -505,7 +501,7 @@ $(document).ready(function(){
       </li>
     </ul>
     <div id="menu-icon-container">
-      <img src="/images/menu-icon-white2.png" id="menu-icon-img" style="width:100%;" alt="">
+      <img src="http://s6.postimg.org/va62i1wap/menu_icon_white2.png" id="menu-icon-img" style="width:100%;" alt="">
     </div>
     <ul class="right" id="top-bar-right" >
       <li>
@@ -538,11 +534,11 @@ $(document).ready(function(){
       <!-- CTO 
       <hr>
       <p style="font-size:100px;tex-align:center;font-weight:bold;color:white;">This</p> -->
-      <img src="/images/CTOLogo2.png" style="width:100%;" alt="">
+      <img src="http://s28.postimg.org/dghtrechp/CTOLogo2.png" style="width:100%;" alt="">
     </div>
 
     <button class="circle-button scrollDown">
-    <img src="/images/downIcon3.png" style="width:100%;"alt="">
+    <img src="http://s6.postimg.org/upr1fd329/down_Icon3.png" style="width:100%;"alt="">
     </button>
     
   </div>
@@ -583,7 +579,7 @@ $(document).ready(function(){
                 </p>
               </div>
               <br>
-              <img src="/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+              <img src="http://s28.postimg.org/dghtrechp/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
               <br>
             </div>
           </div>
