@@ -12,27 +12,26 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 
 <style>
   /** Search in alphabetical order **/
 
+/** Search in alphabetical order **/
+
 *{
-  font-family: "Lato";
+  font-family: "Myriad Pro";
   font-weight: lighter;
 }
 
 
 body{
-  background-image: url("http://s6.postimg.org/hhrnmf5j5/random5.jpg");
   background-clip: border-box;
   background-repeat: no-repeat;
-  background-size: cover;
     background-attachment: fixed;
     max-width:100%;
+    visibility: hidden;
 }
 
 .circle-button{
@@ -55,6 +54,25 @@ body{
 
 }
 
+
+.dev_banner{
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+}
+
+.developers{
+  color: #339900;
+}
+
+
+.ventures{
+  color: #00fff3;
+}
 
 div.cto-navbar{
   /*background-color: rgba(255,255,255,0.97);*/
@@ -100,8 +118,8 @@ div.cto-navbar ul.left li{
   padding-right: 10px;
   text-align: center;
   height:100%;
+  line-height: 60px;
   font-size: 40px;
-  padding-top: 5px;
 }
 
 div.cto-navbar ul.right li{
@@ -118,7 +136,6 @@ div.cto-navbar ul.left li a{
   height: 100%;
   color: white;
   padding-right: 10px;
-  font-weight: lighter;
 }
 
 div.cto-navbar ul.right li a{
@@ -193,12 +210,12 @@ margin-right: auto;
 max-width: initial;
 }
 
-#inner-left-container{
+.inner-left-container{
   padding:50px;
   padding-top: 54px;
 }
 
-#inner-right-container{
+.inner-right-container{
   padding:50px;
   padding-top: 54px;
 }
@@ -221,22 +238,29 @@ input#subscribe:hover{
   border: solid black 2px;
 }
 
-#left-content{
+.left-content{
   padding: 40px;
+  padding-top: 15px;
   background: rgba(250,250,250,0.99);
 }
 
-#left-content h1{
+.left-content2{
+  padding: 40px;
+  padding-top: 15px;
+  background: rgba(250,250,250,0.99);
+}
+
+.left-content h1{
   color: black;
 }
 
 
-#right-content{
+.right-content{
   padding: 40px;
   background: rgba(250,250,250,0.99);
 }
 
-#right-content p{
+.right-content p{
   font-size: 25px;
 }
 
@@ -261,25 +285,52 @@ input#subscribe:hover{
 
 .second_page_body{
   width:100%;
-  background: rgba(250,250,250,0.8);
+  padding-left: 50px;
+  padding-right: 50px;
+  background: rgba(255,255,255,0.93);
 }
 
 .third_page_body{
   width:100%;
-  padding:50px;
-  background: rgba(250,250,250,0.9);
+  padding-left: 50px;
+  padding-right: 50px;
+  background: black;
+}
+
+.cto_footer{
+  height:400px;
+  width:100%;
+  background-color: rgba(250,250,250,0.9);
+}
+
+.cto-container{
+  padding:5px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 h1{
   color:white;
-  /*font-family:'Avenir';*/
+  font-family:'Avenir';
   font-weight:lighter;
 }
 
 h2{
   color:white;
-  /*font-family:'Avenir';*/
+  font-family:'Avenir';
   font-weight:lighter;  
+}
+
+input[type=submit]{
+  color: white;
+  background-color: black;
+  margin:0px;
+}
+
+input[type=submit]:hover{
+  color: black;
+  background-color: transparent;
+  margin:0px;
 }
 
 .cto-stick{
@@ -297,15 +348,23 @@ h2{
     text-align: center;
   }
 
+  .cto-container{
+    padding:0px;
+  }
+
   .second_page_body{
     display: block;
   }
 
-  #inner-left-container{
+  .third_page_body{
+    display: block;
+  }
+
+  .inner-left-container{
     padding:0px;
   }
 
-  #inner-right-container{
+  .inner-right-container{
     padding:0px;
   }
   div.cto-navbar ul.right li{
@@ -318,13 +377,20 @@ h2{
     padding-right: 0px;
     padding-left: 0px;
   }
-}
 
+  .third_page_body{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
 
 </style>
 
 <script>
+
+/** CTOthis.js **/
   
+
 // jQuery functions for centering elements on html
 $.fn.verticalCenter = function () {
     this.css("position","absolute");
@@ -347,7 +413,15 @@ $.fn.beneath = function ($element) {
     this.css('top', element_ends + 'px');
 };
 
+
+
 $(document).ready(function(){
+
+    var body = $('body');
+    body.hide();
+    body.css({visibility:'visible'});
+    body.delay(100).fadeIn(2500);
+    body.css({background:'url("/static/images/random5.jpg")'});
 
 // first centre the CTO This title and the button underneath
     var main_title_top = $('.main-title').position().top;
@@ -364,7 +438,7 @@ $(document).ready(function(){
     var endOfPage1 = Math.max(main_title_bottom + (circle_height + 50),$(window).height());
     var circle_top = endOfPage1 - circle_height;
 
-    // Put circle at the bottom if the page is big enough
+// Put circle at the bottom if the page is big enough
     if(circle_top > main_title_bottom){
         $('.circle-button').css('top',circle_top);
     } else {
@@ -398,9 +472,12 @@ $(document).ready(function(){
 // scroll for container div
 
 });
+
 </script>
 
 <script>
+/** background-scroll.js **/
+
   $(document).ready(function(){
   $('body').each(function(){
         var $bgobj = $(this); // assigning the object
@@ -418,7 +495,8 @@ $(document).ready(function(){
 </script>
 
 <script>
-  
+/** cto-dropdown.js **/
+ 
 $.fn.slideIn = function(){
   this.show();
   this.css('position','relative');
@@ -443,10 +521,10 @@ $.fn.slideInMenu = function(){
   if(this.attr('id') == 'top-bar-right'){
     if(this.is(':visible')){
       this.slideOut();
-      $('#menu-icon-img').attr('src',"http://s6.postimg.org/va62i1wap/menu_icon_white2.png");
+      $('#menu-icon-img').attr('src',"/static/images/menu-icon-white2.png");
     }else{
       this.slideIn();
-      $('#menu-icon-img').attr('src',"http://s6.postimg.org/4rnf9bxkt/x_icon.png");
+      $('#menu-icon-img').attr('src',"/static/images/x-icon.png");
     }
   }else{
     this.toggle();
@@ -460,10 +538,11 @@ $(document).ready(function() {
     $('.cto-present-menu').slideInMenu();
   });
 });
+
 </script>
 
 <script>
-  
+/** scroll-animations.js **/
 
 $(document).ready(function(){
     var navHeight = $('.cto-navbar').outerHeight();
@@ -486,15 +565,23 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop : endOfPage1 - navHeight},800);
         return false;
     });
+
+    $('#ventures').click(function(){
+        var topOfButton = $('#ventures').position().top;
+        console.log(topOfButton);
+        $('html, body').animate({scrollTop : $('#page2').outerHeight() + endOfPage1 - navHeight},800);
+        return false;
+    });
     
     $('#scrollUp').click(function(){
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
 });
-</script>
 
+</script>
 </head>
+
 <body data-speed="2">
   <div class="fill cto-navbar" >
     <ul class="left showOnPage2" id="scrollUp">
@@ -503,7 +590,7 @@ $(document).ready(function(){
       </li>
     </ul>
     <div id="menu-icon-container">
-      <img src="http://s6.postimg.org/va62i1wap/menu_icon_white2.png" id="menu-icon-img" style="width:100%;" alt="">
+      <img src="/static/images/menu-icon-white2.png" id="menu-icon-img" style="width:100%;" alt="">
     </div>
     <ul class="right" id="top-bar-right" >
       <li>
@@ -517,7 +604,7 @@ $(document).ready(function(){
       </li>
     </ul>
   </div>
-  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu">
+  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu" >
     <ul >
       <li>
         <a href="#">Subscribe</a>
@@ -530,63 +617,129 @@ $(document).ready(function(){
       </li>
     </ul>
   </div>
-
-  <div class="page_body" id="page1">
+  <div class="page_body page1" id="page1">
     <div class="main-title">
-      <!-- CTO 
+      <!-- CTO
       <hr>
       <p style="font-size:100px;tex-align:center;font-weight:bold;color:white;">This</p> -->
-      <img src="http://s28.postimg.org/dghtrechp/CTOLogo2.png" style="width:100%;" alt="">
+      <img src="/static/images/CTOLogo2.png" style="width:100%;" alt="">
     </div>
-
     <button class="circle-button scrollDown">
-    <img src="http://s6.postimg.org/upr1fd329/down_Icon3.png" style="width:100%;"alt="">
+    <img src="/static/images/downIcon3.png" style="width:100%;"alt="">
     </button>
     
   </div>
-  <div class="second_page_body" id="page2">
-    <div class="container ">
-        <div class="row">
-          <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5" id="inner-right-container">
-            <div id="right-content">
-
-              <p>
-                You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)". 
-              </p>
-              <br><br><br>
-              <br>
-              <br>
-              <p>
-                Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO. 
-              </p>
-              <br><br><br>
-              <br>
-              <br>
-              <p>
-                Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
-              </p>
+  <div class="second_page_body page2 " id="page2">
+    <div class="cto-container ">
+      <div class="row">
+        <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+          <div class="dev_banner developers">
+                Developers
             </div>
-          </div>
-          <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7" id="inner-left-container">
-            <div id="left-content">
-              <div style="">
-                <h1>
-                  Subscribe here
-                </h1>
-                <p>
-                  <h4>
-                    Your email address
-                  </h4>
-                  <input type="text" id="subscribe" class="text">
-                </p>
-              </div>
-              <br>
-              <img src="http://s28.postimg.org/dghtrechp/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
-              <br>
-            </div>
+          <div class="right-content">
+            <p>
+              You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
+            </p>
+            <br><br><br>
+            <p>
+              Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
+            </p>
+            <br><br><br>
+            <p>
+              Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
+            </p>
           </div>
         </div>
+        <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="left-content">
+            <div style="">
+                <!-- <input type="text" id="subscribe" class="text"> -->
+                <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                <h1>
+                Subscribe here
+                </h1>
+                <div id="mc_embed_signup">
+                  <form action="//imperialcreatelab.us10.list-manage.com/subscribe/post?u=de63a36d975c4e4aa119a0c5e&amp;id=e6f9282663" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="padding:0px;" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                      <div class="mc-field-group" style="margin:0px;width:100%;">
+                          <label for="mce-EMAIL">
+                            <h4>
+                            Your email address
+                            </h4> 
+                          </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="border:none;">
+                      </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <input type="text" name="b_de63a36d975c4e4aa119a0c5e_e6f9282663" tabindex="-1" value="" hidden>
+                    </div>
+                    <input type="submit" value="Subscribe" id="mc-embedded-subscribe" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;">
+                  </form>
+                </div>
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+            </div>
+            <br>
+            <img src="/static/images/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+          <br>
+          </div>
+          <div class="left-content2">
+            Looking for developers?
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="third_page_body page3" id="page3">
+    <div class="cto-container ">
+      <div class="row">
+        <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+          <div class="dev_banner ventures scrollToMe" id="ventures">
+                Ventures
+            </div>
+          <div class="right-content">
+            <p>
+              You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
+            </p>
+            <br><br><br>
+            <p>
+              Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
+            </p>
+            <br><br><br>
+            <p>
+              Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="left-content">
+            <div style="">
+                <!-- <input type="text" id="subscribe" class="text"> -->
+                <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                <h1>
+                Subscribe here
+                </h1>
+                
+                <!--End mc_embed_signup-->
+            </div>
+            <br>
+          </div>
+          <img src="/static/images/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+          <br>
+          <div class="left-content2">
+            Looking for developers?
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cto_footer">
+    
+  </div>
   </div>
 </body>
 </html>
