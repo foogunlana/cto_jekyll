@@ -19,7 +19,7 @@
 /** Search in alphabetical order **/
 
 *{
-  font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+  font-family: 'Myriad Pro', MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, Helvetica, Arial, sans-serif;
   font-weight: lighter;
 }
 
@@ -353,7 +353,8 @@ input#subscribe:hover{
 
 .cto_footer{
   height:400px;
-  width:100%;
+  right:0;
+  left:0;
   background-color: rgba(1,1,1,1);
   position: absolute;
     /*bottom: 0;*/
@@ -363,6 +364,11 @@ input#subscribe:hover{
   padding:5px;
   padding-left: 200px;
   padding-right: 200px;
+}
+
+.cto-container.row{
+  left:0;
+  right:0;
 }
 
 h1{
@@ -484,7 +490,6 @@ input[type=submit]:hover{
     min-width: 600px;
   }
 }
-
 
 </style>
 
@@ -688,61 +693,128 @@ $(document).ready(function(){
 
 </script>
 </head>
-
 <body data-speed="2">
-    <div class="fill cto-navbar" >
-      <ul class="left showOnPage2" id="scrollUp">
-        <li >
-          <a href="#" >CTO This</a>
-        </li>
-      </ul>
-      <div id="menu-icon-container">
-        <img src="http://s6.postimg.org/va62i1wap/menu_icon_white2.png" id="menu-icon-img" style="width:100%;" alt="">
+  <div class="fill cto-navbar">
+    <ul class="left showOnPage2" id="scrollUp">
+      <li >
+        <a href="#" >CTO This</a>
+      </li>
+    </ul>
+    <div id="menu-icon-container">
+      <img src="http://s6.postimg.org/va62i1wap/menu_icon_white2.png" id="menu-icon-img" style="width:100%;" alt="">
+    </div>
+    <ul class="right" id="top-bar-right" >
+      <li>
+        <a href="#">Subscribe</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu" >
+    <ul >
+      <li>
+        <a href="#">Subscribe</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+  <div class="page_body page1" id="page1">
+    <div class="main-title">
+      <!-- CTO
+      <hr>
+      <p style="font-size:100px;tex-align:center;font-weight:bold;color:white;">This</p> -->
+      <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;" alt="">
+    </div>
+    <button class="circle-button scrollDown">
+    <img src="http://s6.postimg.org/upr1fd329/down_Icon3.png" style="width:100%;"alt="">
+    </button>
+    
+  </div>
+  <div class="second_page_body page2 " id="page2">
+    <div class="cto-container ">
+      <div class="row" style="margin-left:0px;margin-right:0px;">
+        <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+          <div class="right-content">
+            <div class="dev_banner developers">
+              Developers
+            </div>
+            <div class="inner-right-content">
+              <p>
+                You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
+              </p>
+              <br><br><br>
+              <p>
+                Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
+              </p>
+              <br><br><br>
+              <p>
+                Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="left-content">
+            <div class="inner-left-heading">
+              <!-- <input type="text" id="subscribe" class="text"> -->
+              <!-- Begin MailChimp Signup Form -->
+              Subscribe here
+              <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"> -->
+            </div>
+            <div class="inner-left-content">
+              <div id="mc_embed_signup">
+                <form action="//imperialcreatelab.us10.list-manage.com/subscribe/post?u=de63a36d975c4e4aa119a0c5e&amp;id=e6f9282663" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="padding:0px;" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                    <div class="mc-field-group" style="margin:0px;width:100%;">
+                      <label for="mce-EMAIL">
+                        <h4>
+                        Your email address
+                        </h4>
+                      </label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="border:none;">
+                    </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <input type="text" name="b_de63a36d975c4e4aa119a0c5e_e6f9282663" tabindex="-1" value="" hidden>
+                    </div>
+                    <input type="submit" value="Go!" id="mc-embedded-subscribe" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;">
+                  </form>
+                </div>
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+                <br>
+                <br>
+                <br>
+                <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+              </div>
+              <br>
+            </div>
+            <!--               <div class="left-content2">
+              Looking for developers?
+            </div> -->
+          </div>
+        </div>
       </div>
-      <ul class="right" id="top-bar-right" >
-        <li>
-          <a href="#">Subscribe</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-      </ul>
     </div>
-    <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu" >
-      <ul >
-        <li>
-          <a href="#">Subscribe</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-      </ul>
-    </div>
-    <div class="page_body page1" id="page1">
-      <div class="main-title">
-        <!-- CTO
-        <hr>
-        <p style="font-size:100px;tex-align:center;font-weight:bold;color:white;">This</p> -->
-        <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;" alt="">
-      </div>
-      <button class="circle-button scrollDown">
-      <img src="http://s6.postimg.org/upr1fd329/down_Icon3.png" style="width:100%;"alt="">
-      </button>
-      
-    </div>
-    <div class="second_page_body page2 " id="page2">
+    <div class="third_page_body page3" id="page3">
       <div class="cto-container ">
-        <div class="row">
-          <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+        <div class="row" style="margin-left:0px;margin-right:0px;">
+          <div class="col-xs-14 col-sm-14 col-md-7 inner-right-container">
             <div class="right-content">
-              <div class="dev_banner developers">
-                Developers
+              <div class="dev_banner ventures" id="ventures">
+                Ventures
               </div>
               <div class="inner-right-content">
                 <p>
@@ -759,109 +831,41 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
-          <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="col-xs-14 col-sm-14 col-md-5 inner-left-container">
             <div class="left-content">
-              <div class="inner-left-heading">
+              <div class="inner-left-heading" >
                 <!-- <input type="text" id="subscribe" class="text"> -->
                 <!-- Begin MailChimp Signup Form -->
-                Subscribe here
-                <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"> -->
-                </div>
-                <div class="inner-left-content">
-                  <div id="mc_embed_signup">
-                    <form action="//imperialcreatelab.us10.list-manage.com/subscribe/post?u=de63a36d975c4e4aa119a0c5e&amp;id=e6f9282663" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="padding:0px;" novalidate>
-                      <div id="mc_embed_signup_scroll">
-                        <div class="mc-field-group" style="margin:0px;width:100%;">
-                          <label for="mce-EMAIL">
-                            <h4>
-                            Your email address
-                            </h4>
-                          </label>
-                          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="border:none;">
-                        </div>
-                        <div id="mce-responses" class="clear">
-                          <div class="response" id="mce-error-response" style="display:none"></div>
-                          <div class="response" id="mce-success-response" style="display:none"></div>
-                          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                          <input type="text" name="b_de63a36d975c4e4aa119a0c5e_e6f9282663" tabindex="-1" value="" hidden>
-                        </div>
-                        <input type="submit" value="Go!" id="mc-embedded-subscribe" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;">
-                      </form>
-                    </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                    <!--End mc_embed_signup-->
-                    <br>
-                    <br>
-                    <br>
-                    <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
-                  </div>
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                Subscribe
+                <!--End mc_embed_signup-->
+              </div>
+              <div class="inner-left-content">
+                <button class="button-link" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;" data-url="https://docs.google.com/forms/d/1qMm31rqfCivAffj3lSjlWgxqX2Xl5h3DyfnAfMvkxTA/viewform?c=0&w=1">View form</button>
+                <script>
+                $(document).ready(function(){
+                $('button.button-link').click(function(event){
+                var url = $('button.button-link').data('url');
+                window.open(url).focus();
+                });
+                })
+                </script>
+                <br>
+                <br>
+                <br>
+                <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;max-width:400px;" style="width:100%;max-width:400px;" alt="">
                 <br>
               </div>
-<!--               <div class="left-content2">
-                Looking for developers?
-              </div> -->
             </div>
+            <!--               <div class="left-content2">
+              Looking for developers?
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="third_page_body page3" id="page3">
-        <div class="cto-container ">
-          <div class="row">
-            <div class="col-xs-14 col-sm-14 col-md-7 inner-right-container">
-              <div class="right-content">
-                <div class="dev_banner ventures" id="ventures">
-                  Ventures
-                </div>
-                <div class="inner-right-content">
-                  <p>
-                    You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
-                  </p>
-                  <br><br><br>
-                  <p>
-                    Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
-                  </p>
-                  <br><br><br>
-                  <p>
-                    Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-14 col-sm-14 col-md-5 inner-left-container">
-              <div class="left-content">
-                <div class="inner-left-heading" >
-                  <!-- <input type="text" id="subscribe" class="text"> -->
-                  <!-- Begin MailChimp Signup Form -->
-                  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-                  Subscribe
-                  <!--End mc_embed_signup-->
-                </div>
-                <div class="inner-left-content">
-                  <button class="button-link" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;" data-url="https://docs.google.com/forms/d/1qMm31rqfCivAffj3lSjlWgxqX2Xl5h3DyfnAfMvkxTA/viewform?c=0&w=1">View form</button>
-                  <script>
-                    $(document).ready(function(){
-                      $('button.button-link').click(function(event){
-                          var url = $('button.button-link').data('url');
-                          window.open(url).focus();
-                      });
-                    })
-                  </script>
-                  <br>
-                  <br>
-                  <br>
-                  <img src="http://s6.postimg.org/oifnf77b5/CTOLogo2.png" style="width:100%;max-width:400px;" style="width:100%;max-width:400px;" alt="">
-                  <br>
-                </div>
-              </div>
-<!--               <div class="left-content2">
-                Looking for developers?
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cto_footer">
-          
-      </div>
-    </body>
+    </div>
+    <div class="cto_footer">
+      
+    </div>
+  </body>
 </html>
