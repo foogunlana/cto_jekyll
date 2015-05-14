@@ -574,12 +574,21 @@ $(document).ready(function(){
         top_right_bar.addClass('cto-present-menu');
     }
 
-// On resizing the page, re-center the main title and the circle button continuously
+// On resizing the page, re-center the main title and the circle button continuously. Also, recalculate the status of the dropdown menu
     $(window).resize(function(){
         $('.main-title').horizontalCenter();
         $('.circle-button').horizontalCenter();
-    });
 
+        if($(window).width() < 640){
+            top_right_bar.removeClass('cto-present-menu');
+            dropdown.addClass('cto-present-menu');
+            top_right_bar.hide();
+        }else{
+            dropdown.removeClass('cto-present-menu');
+            top_right_bar.addClass('cto-present-menu');
+            dropdown.hide();
+        }
+    });
 
 // scroll for container div
 
