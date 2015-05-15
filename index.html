@@ -17,7 +17,6 @@
 
 <style>
 /** Search in alphabetical order **/
-
 *{
   font-family: 'Myriad Pro', MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, Helvetica, Arial, sans-serif;
   font-weight: lighter;
@@ -361,9 +360,8 @@ input#subscribe:hover{
 }
 
 .cto-container{
-  padding:5px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding:150px;
+  padding-top:5px;
 }
 
 .cto-container.row{
@@ -402,6 +400,11 @@ input[type=submit]:hover{
 
 #mc_embed_signup{
   height:100px;
+}
+
+.footer_links{
+  float:right;
+  padding:50px;
 }
 
 
@@ -466,6 +469,14 @@ input[type=submit]:hover{
     -moz-box-shadow:    0px 0px 0px  #aaa;
       -webkit-box-shadow: 0px 0px 0px  #ccc;
   }
+
+  .cto_footer{
+    height: 500px;
+  }
+
+  .footer_links{
+    float:left;
+  }
 } 
 
 @media screen and (max-width:960px){
@@ -489,9 +500,8 @@ input[type=submit]:hover{
   .cto-container.row{
     min-width: 600px;
   }
+
 }
-
-
 </style>
 
 <script>
@@ -728,10 +738,10 @@ $(document).ready(function(){
       </div>
       <ul class="right" id="top-bar-right" >
         <li>
-          <a class="scrollDevelopers" style="cursor:pointer;">Developers</a>
+          <a class="scrollDevelopers" style="cursor:pointer">Developers</a>
         </li>
         <li>
-          <a class="scrollVentures" style="cursor:pointer;">Ventures</a>
+          <a class="scrollVentures" style="cursor:pointer">Ventures</a>
         </li>
         <li>
           <a class="" href="http://imperialcreatelab.com/cto-this/">Contact us</a>
@@ -741,10 +751,10 @@ $(document).ready(function(){
     <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu" >
       <ul >
         <li>
-          <a class="scrollDevelopers" style="cursor:pointer;">Developers</a>
+          <a class="scrollDevelopers" style="cursor:pointer">Developers</a>
         </li>
         <li>
-          <a class="scrollVentures" style="cursor:pointer;">Ventures</a>
+          <a class="scrollVentures" style="cursor:pointer">Ventures</a>
         </li>
         <li>
           <a class="" href="http://imperialcreatelab.com/cto-this/">Contact us</a>
@@ -828,12 +838,6 @@ $(document).ready(function(){
               </div> -->
             </div>
           </div>
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
         </div>
       </div>
       <div class="third_page_body page3" id="page3">
@@ -916,17 +920,12 @@ $(document).ready(function(){
               </div> -->
             </div>
           </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
         </div>
       </div>
       <div class="cto_footer">
           <div class="row">
             <div class="col-xs-14 col-sm-14 col-md-6 col-lg-6">
-              <ul style="float:right;padding:50px;">
+              <ul class="footer_links">
                 <li>
                   <a style="color:white;" href="http://www.icappsoc.co.uk">AppSoc</a>
                 </li>
